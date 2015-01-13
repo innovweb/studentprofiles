@@ -22,6 +22,19 @@
 				<a href="http://www.princetoninnovation.org"><img src="images/Logo_Full.png" alt="Innovation Logo" width="260" height="96"></a>
 				<h1>25 <span>Under</span> 25</h1>
 			</header>
+			<div id="fullDescript">
+				<img src="images/close.png" id="close1"></img>
+				<h1>Stephen Cognetta</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis ante mollis, eleifend pretium risus sollicitudin. Donec vel ultrices ante. Vestibulum mollis elit blandit, tempor arcu vel, volutpat justo. Nam accumsan rutrum quam, eu semper justo ultricies at. Etiam laoreet eleifend dictum. Aliquam consectetur tristique varius. Nulla viverra enim eu ligula semper hendrerit. Mauris tortor arcu, ultrices id tristique ut, finibus eget est. Maecenas mollis dictum nulla sit amet sodales. Donec hendrerit justo justo, ac finibus justo ultricies ac. Aenean pharetra lectus nibh, in vestibulum diam elementum at.
+
+				Sed et mauris a mauris iaculis consectetur eget sit amet arcu. Pellentesque at nunc enim. Fusce faucibus finibus vulputate. Maecenas tincidunt diam sit amet sagittis fringilla. Morbi ut massa ac mauris cursus facilisis. In interdum vitae quam ac varius. Praesent leo velit, convallis eu ultrices a, vehicula et est. Ut a volutpat augue. Curabitur tincidunt lacus nec elit porta, non scelerisque sapien malesuada. Nulla rutrum lectus nec eleifend elementum. Curabitur pulvinar dapibus sapien in accumsan. Quisque pretium non sem mattis pellentesque. Maecenas laoreet viverra dui. Sed id odio magna.
+
+				Proin eu tortor sed arcu lobortis accumsan. Donec placerat sem odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean eleifend at eros in dapibus. Nunc blandit urna enim, venenatis elementum purus pharetra eget. Sed elit nulla, congue non nulla a, tempus pellentesque ligula. Praesent pretium nibh eget nisl pellentesque dictum. Aliquam dolor magna, placerat vel purus sit amet, venenatis faucibus mauris. Etiam nec fringilla ex. Nunc cursus consectetur leo et efficitur.
+
+				Duis interdum sapien mauris, eget tincidunt erat interdum vel. Curabitur vulputate iaculis sem, at mollis neque ullamcorper a. Praesent pulvinar nunc eget malesuada mollis. Morbi scelerisque mi risus, in bibendum libero fermentum a. Etiam eget justo lectus. Aliquam vel ultrices lacus. Phasellus viverra molestie metus placerat convallis.
+
+				Vivamus varius, ante tincidunt pretium rutrum, libero felis facilisis diam, et iaculis est lorem non sapien. Vestibulum sed quam nulla. Nullam sollicitudin feugiat eros, at posuere ante rhoncus nec. Duis vitae rhoncus diam, eget dictum sem. Ut eget ante eu sapien consectetur varius in vitae mauris. Proin ut gravida diam. Nullam ullamcorper eleifend lacinia. Nulla ut sem euismod, tempus est et, tempor nisi.</p>
+			</div>
 			<section class="pe-container">
 				<ul id="pe-thumbs" class="pe-thumbs">
 					<li><a href="#"><img src="images/thumbs/stephen.jpg" /><div class="pe-description"><h3>Stephen</h3><p>Since time, and his predestinated end</p></div></a></li>
@@ -57,165 +70,7 @@
         </div>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery.proximity.js"></script>
-		<script type="text/javascript">
-			$(function() {
-				
-				var Photo	= (function() {
-					
-						// list of thumbs
-					var $list		= $('#pe-thumbs'),
-						// list's width and offset left.
-						// this will be used to know the position of the description container
-						listW		= $list.width(),
-						listL		= $list.offset().left,
-						// the images
-						$elems		= $list.find('img'),
-						// the description containers
-						$descrp		= $list.find('div.pe-description'),
-						// maxScale : maximum scale value the image will have
-						// minOpacity / maxOpacity : minimum (set in the CSS) and maximum values for the image's opacity
-						settings	= {
-							maxScale	: 1.3,
-							maxOpacity	: 0.9,
-							minOpacity	: Number( $elems.css('opacity') )
-						},
-						init		= function() {
-							
-							// minScale will be set in the CSS
-							settings.minScale = _getScaleVal() || 1;
-							// preload the images (thumbs)
-							_loadImages( function() {
-								
-								_calcDescrp();
-								_initEvents();
-							
-							});
-						
-						},
-						// Get Value of CSS Scale through JavaScript:
-						// http://css-tricks.com/get-value-of-css-rotation-through-javascript/
-						_getScaleVal= function() {
-						
-							var st = window.getComputedStyle($elems.get(0), null),
-								tr = st.getPropertyValue("-webkit-transform") ||
-									 st.getPropertyValue("-moz-transform") ||
-									 st.getPropertyValue("-ms-transform") ||
-									 st.getPropertyValue("-o-transform") ||
-									 st.getPropertyValue("transform") ||
-									 "fail...";
-
-							if( tr !== 'none' ) {	 
-
-								var values = tr.split('(')[1].split(')')[0].split(','),
-									a = values[0],
-									b = values[1],
-									c = values[2],
-									d = values[3];
-
-								return Math.sqrt( a * a + b * b );
-							
-							}
-							
-						},
-						// calculates the style values for the description containers,
-						// based on the settings variable
-						_calcDescrp	= function() {
-							
-							$descrp.each( function(i) {
-							
-								var $el		= $(this),
-									$img	= $el.prev(),
-									img_w	= $img.width(),
-									img_h	= $img.height(),
-									img_n_w	= settings.maxScale * img_w,
-									img_n_h	= settings.maxScale * img_h,
-									space_t = ( img_n_h - img_h ) / 2,
-									space_l = ( img_n_w - img_w ) / 2;
-								
-								$el.data( 'space_l', space_l ).css({
-									height	: settings.maxScale * $el.height(),
-									top		: -space_t,
-									left	: img_n_w - space_l
-								});
-							
-							});
-						
-						},
-						_initEvents	= function() {
-						
-							$elems.on('proximity.Photo', { max: 80, throttle: 10, fireOutOfBounds : true }, function(event, proximity, distance) {
-								
-								var $el			= $(this),
-									$li			= $el.closest('li'),
-									$desc		= $el.next(),
-									scaleVal	= proximity * ( settings.maxScale - settings.minScale ) + settings.minScale,
-									scaleExp	= 'scale(' + scaleVal + ')';
-								
-								// change the z-index of the element once it reaches the maximum scale value
-								// also, show the description container
-								if( scaleVal === settings.maxScale ) {
-									
-									$li.css( 'z-index', 1000 );
-									
-									if( $desc.offset().left + $desc.width() > listL + listW ) {
-										
-										$desc.css( 'left', -$desc.width() - $desc.data( 'space_l' ) );
-									
-									}
-									
-									$desc.fadeIn( 500 );
-									
-								}	
-								else {
-									
-									$li.css( 'z-index', 1 );
-								
-									$desc.stop(true,true).hide();
-								
-								}	
-								
-								$el.css({
-									'-webkit-transform'	: scaleExp,
-									'-moz-transform'	: scaleExp,
-									'-o-transform'		: scaleExp,
-									'-ms-transform'		: scaleExp,
-									'transform'			: scaleExp,
-									'opacity'			: ( proximity * ( settings.maxOpacity - settings.minOpacity ) + settings.minOpacity )
-								});
-
-							});
-						
-						},
-						_loadImages	= function( callback ) {
-							
-							var loaded 	= 0,
-								total	= $elems.length;
-							
-							$elems.each( function(i) {
-								
-								var $el = $(this);
-								
-								$('<img/>').load( function() {
-									
-									++loaded;
-									if( loaded === total )
-										callback.call();
-									
-								}).attr( 'src', $el.attr('src') );
-							
-							});
-						
-						};
-					
-					return {
-						init	: init
-					};
-				
-				})();
-				
-				Photo.init();
-				
-			});
-		</script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
