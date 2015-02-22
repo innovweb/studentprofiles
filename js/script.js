@@ -123,15 +123,135 @@ $(function() {
 						'opacity'			: ( proximity * ( settings.maxOpacity - settings.minOpacity ) + settings.minOpacity )
 					});
 
-					$elems.click(function() {
-				      // run the effect
-	      			  $( ".pe-container" ).hide();
-	      			  $( "#fullDescript" ).show();
+					$('#thumb1').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Stephen Cognetta</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis blablahablablablablablablalbablablablalbalalblablablablalbablalblabblablabla</p>");
 	      			});
-	      			$('#close1').click(function() {
-				      // run the effect
-	      			  $( ".pe-container" ).show();
-	      			  $( "#fullDescript" ).hide();
+	      			$('#thumb2').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>John Smith</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb3').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Jane Doe</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb4').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb5').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb6').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb7').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb8').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb9').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb10').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb11').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb12').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb13').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb14').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb15').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb16').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb17').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb18').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb19').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb20').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb21').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb22').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb23').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb24').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+	      			$('#thumb25').on('click', 'li', function() {	
+	      			  $( "#close" ).show();
+	      			  $("#fullDescript").show();
+	      			  $("#fullDescript").html("<h1>Bob</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat massa quis</p>");
+	      			});
+
+	      			$('#close').on('click', function() {
+				      $( "#close" ).hide();
+				      $("#fullDescript").hide();
 	      			});
 				});
 			

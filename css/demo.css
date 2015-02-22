@@ -120,30 +120,34 @@ a{
 }
 
 #fullDescript{
-	display: none;
+	display:none;
 	color: rgba(79,79,79,0.8);
 	font-family: Arial, sans-serif;
-	width: 60%;
+	width: 65%;
 	border-style: solid;
+	margin-top: -50px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0px 20px 20px 20px;
+	padding: 0px 20px 30px 20px;
 }
 
 #fullDescript > h1{
 	font-size: 24px;
 	font-variant: small-caps;
 	font-weight: bold;
-	margin-bottom: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #fullDescript > p{
-
+	text-align: left;
 }
 
-#fullDescript > #close1{
+#close{
+	display: none;
 	position: relative;
-	left: 360px;
+	left: 380px;
+	top: 10px;
 }
 
 .codrops-top{
